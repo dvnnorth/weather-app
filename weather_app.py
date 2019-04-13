@@ -36,24 +36,36 @@ button_attr = {
   "text": "Test Button",
   "bg": "gray"
 }
+button_grid = {
+  "row": 0,
+  "column": 0
+}
 # Define button with dictionary unpacking (and keyword parameters)
 button = tk.Button(frame, **button_attr)
-button.pack()
+button.grid(**button_grid)
 
 # Label definition
 label_attr = {
   "text": "This is a label",
   "bg": "yellow"
 }
+label_grid = {
+  "row": 1,
+  "column": 1
+}
 label = tk.Label(frame, **label_attr)
-label.pack()
+label.grid(**label_grid)
 
 # Entry definition
 entry_attr = {
   "bg": "green"
 }
+entry_grid = {
+  "row": 2,
+  "column": 2
+}
 entry = tk.Entry(frame, **entry_attr)
-entry.pack()
+entry.grid(**entry_grid)
 
 # Execute main loop, bring up window
 root.mainloop()
