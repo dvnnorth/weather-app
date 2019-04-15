@@ -1,11 +1,15 @@
+#!/usr/bin/python3
+
 import tkinter as tk
+import platform
 
 # Root window definition
 root = tk.Tk()
 root.winfo_toplevel().title("Weather App")
 
 # Icon definition
-root.iconbitmap(r"./assets/Graphicloads-Colorful-Long-Shadow-Cloud.ico")
+if platform.system == "Windows":
+  root.iconbitmap(r"./assets/Graphicloads-Colorful-Long-Shadow-Cloud.ico")
 
 # Canvas definition
 canvas_attr = {
